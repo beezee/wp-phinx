@@ -50,11 +50,11 @@ if (!$found) {
 }
 
 require_once __DIR__ . '/../../../../../../../wp-config.php';
-putenv('PHINX_DB_USER='.DB_USER);
-putenv('PHINX_DB_PASSWORD='.DB_PASSWORD);
-putenv('PHINX_DB_HOST='.DB_HOST);
-putenv('PHINX_DB_CHARSET='.DB_CHARSET);
-putenv('PHINX_DB_NAME='.DB_NAME);
+$_SERVER['PHINX_DB_USER'] = DB_USER;
+$_SERVER['PHINX_DB_PASSWORD'] = DB_PASSWORD;
+$_SERVER['PHINX_DB_HOST'] = DB_HOST;
+$_SERVER['PHINX_DB_CHARSET'] = DB_CHARSET;
+$_SERVER['PHINX_DB_NAME'] = DB_NAME;
 
 $app = new Phinx\Console\PhinxApplication(PHINX_VERSION);
 $app->run();
