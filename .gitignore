@@ -1,0 +1,5 @@
+*.swo
+*.swn
+*.swp
+*.swn
+migrations/*
